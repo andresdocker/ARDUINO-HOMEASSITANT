@@ -1,0 +1,62 @@
+
+# Loads default set of integrations. Do not remove.
+default_config:
+
+# Load frontend themes from the themes folder
+frontend:
+  themes: !include_dir_merge_named themes
+
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+mqtt:
+  switch:
+    - name: "Botón LED Arduino"
+      unique_id: "boton_led_arduino"
+      state_topic: "arduino/led/state"
+      command_topic: "arduino/led/set"
+      payload_on: "ON"
+      payload_off: "OFF"
+      optimistic: true
+      qos: 0
+      retain: true
+    - name: "Pin 3"
+      unique_id: "boton_pin3"
+      command_topic: "arduino/pin3"
+      payload_on: "ON"
+      payload_off: "OFF"
+      optimistic: true
+      qos: 0
+      retain: true
+    - name: "Pin 4"
+      unique_id: "boton_pin4"
+      command_topic: "arduino/pin4"
+      payload_on: "ON"
+      payload_off: "OFF"
+      optimistic: true
+      qos: 0
+      retain: true
+    - name: "Pin 5"
+      unique_id: "boton_pin5"
+      command_topic: "arduino/pin5"
+      payload_on: "ON"
+      payload_off: "OFF"
+      optimistic: true
+      qos: 0
+      retain: true
+    - name: "Pin 6"
+      unique_id: "boton_pin6"
+      command_topic: "arduino/pin6"
+      payload_on: "ON"
+      payload_off: "OFF"
+      optimistic: true
+      qos: 0
+      retain: true
+    - name: "Buzzer"
+      unique_id: "boton_buzzer"
+      command_topic: "arduino/buzzer"
+      payload_on: "ON"
+      payload_off: "OFF"
+      optimistic: true
+      qos: 0
+      retain: true
